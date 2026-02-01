@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/LexendDeca-Medium.ttf",
+      "sha1": "99aabd50ff0527c066a3c64b253b2ddeec643f8f"
+    },
+    {
+      "path": "src/assets/fonts/LexendDeca-Regular.ttf",
+      "sha1": "6f49970e1777a4f736e745311df319a58c5cf144"
+    },
+    {
+      "path": "src/assets/fonts/LexendDeca-ExtraLight.ttf",
+      "sha1": "f501b405215c7225abbc19a5487e32f76cdaf236"
+    },
+    {
+      "path": "src/assets/fonts/LexendDeca-SemiBold.ttf",
+      "sha1": "60141a9b4161683af73e7c67820757207f2fc76d"
+    },
+    {
+      "path": "src/assets/fonts/LexendDeca-ExtraBold.ttf",
+      "sha1": "29303b202c7ec3f98bb0d556021ece3fc341c97b"
+    }
+  ]
+}
