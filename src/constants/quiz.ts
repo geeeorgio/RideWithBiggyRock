@@ -1,0 +1,118 @@
+import type { QuizQuestion } from 'src/types';
+
+export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  {
+    id: 'quiz_1',
+    question: 'Who is Biggy Rock?',
+    options: [
+      'A traveler always on the road',
+      'A race driver',
+      'A mechanic',
+      'A blogger',
+    ],
+    correctAnswer: 'A traveler always on the road',
+    hint: 'He rarely stays in one place.',
+  },
+  {
+    id: 'quiz_2',
+    question: 'What matters most to Biggy Rock when traveling?',
+    options: ['The journey itself ', 'The finish line', 'Speed', 'Winning'],
+    correctAnswer: 'The journey itself',
+    hint: 'Not the destination.',
+  },
+  {
+    id: 'quiz_3',
+    question: 'What do vehicles represent in the game?',
+    options: ['Player progress', 'Game difficulty', 'Play time', 'Mistakes'],
+    correctAnswer: 'Player progress',
+    hint: 'Better vehicles mean more progress.',
+  },
+  {
+    id: 'quiz_4',
+    question: 'How many vehicles can be unlocked?',
+    options: ['5', '3', '7', '10'],
+    correctAnswer: '5',
+    hint: 'From worst to best.',
+  },
+  {
+    id: 'quiz_5',
+    question: 'What happens after unlocking a new vehicle?',
+    options: [
+      'A large card with an image and description appears',
+      'A new level starts',
+      'The game becomes harder',
+      'A timer appears',
+    ],
+    correctAnswer: 'A large card with an image and description appears',
+    hint: 'It’s a reward screen.',
+  },
+  {
+    id: 'quiz_6',
+    question: 'What is the main gameplay mechanic?',
+    options: [
+      'Tapping Biggy Rock',
+      'Moving the character',
+      'Avoiding obstacles',
+      'Collecting items',
+    ],
+    correctAnswer: 'Tapping Biggy Rock',
+    hint: 'Tap-based gameplay.',
+  },
+  {
+    id: 'quiz_7',
+    question: 'What happens if you tap the fish?',
+    options: ['-1 point', '+1 point', 'Nothing', 'Game over'],
+    correctAnswer: '-1 point',
+    hint: 'It’s a mistake.',
+  },
+  {
+    id: 'quiz_8',
+    question: 'What are points used for?',
+    options: [
+      'Unlocking vehicles and travel tips',
+      'Buying music',
+      'Skipping gameplay',
+      'Changing characters',
+    ],
+    correctAnswer: 'Unlocking vehicles and travel tips',
+    hint: 'Check My Car and Travel Tips.',
+  },
+  {
+    id: 'quiz_9',
+    question: 'What are Travel Tips?',
+    options: [
+      'Short thoughts from the road',
+      'Long instructions',
+      'Quests',
+      'Achievements',
+    ],
+    correctAnswer: 'Short thoughts from the road',
+    hint: '1–2 lines of text.',
+  },
+  {
+    id: 'quiz_10',
+    question: 'How do you unlock Travel Tips?',
+    options: ['By spending points', 'After every game', 'By time', 'Randomly'],
+    correctAnswer: 'By spending points',
+    hint: '1 tip costs 1 point.',
+  },
+  {
+    id: 'quiz_11',
+    question: 'Does the game have levels?',
+    options: [
+      'No, the game has no levels',
+      'Yes, many levels',
+      'Only 3 levels',
+      'Levels unlock over time',
+    ],
+    correctAnswer: 'No, the game has no levels',
+    hint: 'The game is simple by design.',
+  },
+  {
+    id: 'quiz_12',
+    question: 'What is the overall vibe of Ride With Biggy Rock?',
+    options: ['Relaxed and casual', 'Stressful', 'Aggressive', 'Complex'],
+    correctAnswer: 'Relaxed and casual',
+    hint: 'No pressure.',
+  },
+];

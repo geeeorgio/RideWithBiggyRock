@@ -1,10 +1,21 @@
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { GameBackground } from './components';
+import GameContextProvider from './context/GameContextProvider';
+import RootNavigator from './navigation/RootNavigator';
 
 const App = () => {
   return (
-    <View>
-      <Text>Ride With Biggy Rock</Text>
-    </View>
+    <GameContextProvider>
+      <GameBackground>
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <RootNavigator />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </GameBackground>
+    </GameContextProvider>
   );
 };
 
