@@ -1,4 +1,4 @@
-import type { ImageSourcePropType } from 'react-native';
+import type { Animated, ImageSourcePropType } from 'react-native';
 
 export type ShopItemId =
   | 'old_scooter'
@@ -40,6 +40,25 @@ export type ResultHistory = {
     topScore2: number;
     topScore3: number;
   };
+};
+
+export type GamePhase = 'rules' | 'playing' | 'results';
+
+export type SpawnedItem = {
+  id: string;
+  type: 'biggy' | 'fish';
+  x: number;
+  y: number;
+  opacity: Animated.Value;
+};
+
+export type FloatingScore = {
+  id: string;
+  value: number;
+  x: number;
+  y: number;
+  opacity: Animated.Value;
+  translateY: Animated.Value;
 };
 
 export type GameContextType = {

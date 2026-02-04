@@ -1,3 +1,233 @@
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({});
+import { COLORS, FONTS } from 'src/constants';
+import { hp, sp, wp } from 'src/utils';
+
+export const styles = StyleSheet.create({
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 100,
+  },
+  rulesContent: {
+    width: '90%',
+    alignItems: 'center',
+    gap: hp(20),
+  },
+  rulesImagesRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginBottom: hp(10),
+  },
+  rulesImageContainer: {
+    alignItems: 'center',
+  },
+  rulesCarImage: {
+    width: wp(120),
+    height: hp(100),
+  },
+  rulesFishImage: {
+    width: wp(100),
+    height: hp(80),
+  },
+  plusOneText: {
+    fontSize: sp(24),
+    fontFamily: FONTS.extraBold,
+    color: '#4ADE80',
+    marginTop: hp(5),
+  },
+  minusOneText: {
+    fontSize: sp(24),
+    fontFamily: FONTS.extraBold,
+    color: '#EF4444',
+    marginTop: hp(5),
+  },
+  rulesTextContainer: {
+    padding: wp(20),
+    alignItems: 'center',
+  },
+  rulesTitle: {
+    fontSize: sp(16),
+    fontFamily: FONTS.semiBold,
+    textAlign: 'center',
+    marginBottom: hp(10),
+  },
+  rulesDescription: {
+    fontSize: sp(13),
+    fontFamily: FONTS.regular,
+    textAlign: 'center',
+    marginBottom: hp(5),
+    opacity: 0.9,
+  },
+  rulesHighlight: {
+    fontSize: sp(15),
+    fontFamily: FONTS.semiBold,
+    textAlign: 'center',
+    marginTop: hp(10),
+  },
+  playButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: hp(14),
+    paddingHorizontal: wp(50),
+    gap: wp(10),
+  },
+  playButtonText: {
+    fontSize: sp(18),
+    fontFamily: FONTS.semiBold,
+  },
+  playIcon: {
+    width: wp(24),
+    height: wp(24),
+  },
+  timerContainer: {
+    position: 'absolute',
+    top: hp(10),
+    right: wp(10),
+    alignItems: 'flex-end',
+    zIndex: 50,
+  },
+  timerBadge: {
+    backgroundColor: COLORS.purple_overlay_dark,
+    borderRadius: wp(12),
+    paddingVertical: hp(6),
+    paddingHorizontal: wp(14),
+    marginBottom: hp(5),
+    borderWidth: 1,
+    borderColor: COLORS.purple_border,
+  },
+  timerText: {
+    fontSize: sp(18),
+    fontFamily: FONTS.semiBold,
+  },
+  scoreBadge: {
+    backgroundColor: COLORS.purple_overlay_dark,
+    borderRadius: wp(12),
+    paddingVertical: hp(8),
+    paddingHorizontal: wp(18),
+    borderWidth: 1,
+    borderColor: COLORS.purple_border,
+    minWidth: wp(50),
+    alignItems: 'center',
+  },
+  scoreText: {
+    fontSize: sp(20),
+    fontFamily: FONTS.extraBold,
+  },
+  spawnedItem: {
+    position: 'absolute',
+    zIndex: 10,
+  },
+  biggyImage: {
+    width: wp(100),
+    height: hp(80),
+  },
+  fishImage: {
+    width: wp(80),
+    height: hp(60),
+  },
+  floatingScore: {
+    position: 'absolute',
+    zIndex: 20,
+  },
+  floatingScoreText: {
+    fontSize: sp(28),
+    fontFamily: FONTS.extraBold,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 3,
+  },
+  positiveScore: {
+    color: '#4ADE80',
+  },
+  negativeScore: {
+    color: '#EF4444',
+  },
+  carContainer: {
+    position: 'absolute',
+    bottom: hp(20),
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+    zIndex: 5,
+  },
+  mainCarImage: {
+    width: wp(200),
+    height: hp(280),
+  },
+  resultsContainer: {
+    padding: wp(20),
+    width: '75%',
+    alignItems: 'center',
+    gap: hp(8),
+  },
+  resultsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: COLORS.purple_overlay_medium,
+    borderRadius: wp(10),
+    paddingVertical: hp(8),
+    paddingHorizontal: wp(15),
+    width: '100%',
+  },
+  resultsValueBadge: {
+    backgroundColor: COLORS.purple_overlay_dark,
+    borderRadius: wp(8),
+    paddingVertical: hp(6),
+    paddingHorizontal: wp(16),
+    minWidth: wp(50),
+    alignItems: 'center',
+  },
+  resultsValue: {
+    fontSize: sp(16),
+    fontFamily: FONTS.semiBold,
+  },
+  resultsCarIcon: {
+    width: wp(70),
+    height: hp(45),
+  },
+  resultsFishIcon: {
+    width: wp(55),
+    height: hp(35),
+  },
+  finalResultRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: COLORS.purple_overlay_medium,
+    borderRadius: wp(10),
+    paddingVertical: hp(10),
+    paddingHorizontal: wp(15),
+    width: '100%',
+  },
+  finalResultLabel: {
+    fontSize: sp(14),
+    fontFamily: FONTS.medium,
+  },
+  finalScoreBadge: {
+    backgroundColor: COLORS.purple,
+    borderRadius: wp(8),
+    paddingVertical: hp(6),
+    paddingHorizontal: wp(16),
+    minWidth: wp(50),
+    alignItems: 'center',
+  },
+  finalScoreText: {
+    fontSize: sp(16),
+    fontFamily: FONTS.extraBold,
+  },
+  startAgainButton: {
+    marginTop: hp(8),
+    paddingVertical: hp(12),
+    width: '100%',
+  },
+  startAgainText: {
+    fontSize: sp(15),
+    fontFamily: FONTS.semiBold,
+  },
+});

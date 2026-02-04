@@ -5,7 +5,7 @@ export const COLORS = {
   orange: '#f57221',
   dark_purple: '#720b6f',
   wrong_answer: '#df3a0d',
-  correct_answer: '#10bb30;',
+  correct_answer: '#10bb30',
 
   purple_border: '#6d286b',
   purple_container: 'rgba(182, 21, 191, 0.2)',
