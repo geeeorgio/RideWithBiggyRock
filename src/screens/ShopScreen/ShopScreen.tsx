@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, View } from 'react-native';
 
 import { styles } from './styles';
@@ -10,12 +10,26 @@ import {
   ShopItemCard,
   ShopItemDetails,
 } from 'src/components';
+import { CAR_SCREEN_BG, MAIN_BG_IMAGE } from 'src/constants';
 import { useGameContext } from 'src/hooks/useGameContext';
 import type { ShopItem } from 'src/types';
 
 const ShopScreen = () => {
-  const { contextShop, contextResults, buyContextShopItem } = useGameContext();
+  const {
+    contextShop,
+    contextResults,
+    buyContextShopItem,
+    setContextBackground,
+  } = useGameContext();
   const [selectedItem, setSelectedItem] = useState<ShopItem | null>(null);
+
+  useEffect(() => {
+    setContextBackground(CAR_SCREEN_BG);
+
+    return () => {
+      setContextBackground(MAIN_BG_IMAGE);
+    };
+  }, [setContextBackground]);
 
   if (selectedItem) {
     return (

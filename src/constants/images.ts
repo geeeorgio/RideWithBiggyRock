@@ -1,5 +1,7 @@
 export const MAIN_BG_IMAGE = require('../assets/images/bckgd/bckd.png');
 
+export const TAP_GAME_BG = require('../assets/images/bckgd/tap_game_bg.png');
+
 export const CAR_SCREEN_BG = require('../assets/images/bckgd/car_screen_bckd.png');
 
 export const HOME_SCREEN_ICON = require('../assets/images/icons/home_screen.png');

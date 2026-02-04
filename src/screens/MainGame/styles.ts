@@ -4,13 +4,40 @@ import { COLORS, FONTS } from 'src/constants';
 import { hp, sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
-  overlay: {
+  resultsOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 100,
+    zIndex: 500,
   },
+
+  exitOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+  },
+
+  closeOverlayBtn: {
+    position: 'absolute',
+    top: hp(60),
+    right: wp(30),
+    width: wp(40),
+    height: wp(40),
+    borderRadius: wp(20),
+    backgroundColor: COLORS.purple_overlay_dark,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 501,
+  },
+  closeOverlayText: {
+    fontSize: sp(20),
+    fontFamily: FONTS.semiBold,
+    color: COLORS.white,
+  },
+
   rulesContent: {
     width: '90%',
     alignItems: 'center',
@@ -36,14 +63,14 @@ export const styles = StyleSheet.create({
   plusOneText: {
     fontSize: sp(24),
     fontFamily: FONTS.extraBold,
-    color: '#4ADE80',
-    marginTop: hp(5),
+    color: COLORS.correct_answer,
+    marginBottom: hp(5),
   },
   minusOneText: {
     fontSize: sp(24),
     fontFamily: FONTS.extraBold,
-    color: '#EF4444',
-    marginTop: hp(5),
+    color: COLORS.wrong_answer,
+    marginBottom: hp(5),
   },
   rulesTextContainer: {
     padding: wp(20),
@@ -142,22 +169,10 @@ export const styles = StyleSheet.create({
     textShadowRadius: 3,
   },
   positiveScore: {
-    color: '#4ADE80',
+    color: COLORS.correct_answer,
   },
   negativeScore: {
-    color: '#EF4444',
-  },
-  carContainer: {
-    position: 'absolute',
-    bottom: hp(20),
-    left: 0,
-    right: 0,
-    alignItems: 'center',
-    zIndex: 5,
-  },
-  mainCarImage: {
-    width: wp(200),
-    height: hp(280),
+    color: COLORS.wrong_answer,
   },
   resultsContainer: {
     padding: wp(20),
@@ -182,6 +197,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(16),
     minWidth: wp(50),
     alignItems: 'center',
+    borderWidth: 2,
+    borderColor: COLORS.purple_border,
   },
   resultsValue: {
     fontSize: sp(16),
@@ -227,6 +244,43 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
   startAgainText: {
+    fontSize: sp(15),
+    fontFamily: FONTS.semiBold,
+  },
+  exitModalContainer: {
+    padding: wp(24),
+    width: '80%',
+    alignItems: 'center',
+    gap: hp(12),
+  },
+  exitTitle: {
+    fontSize: sp(20),
+    fontFamily: FONTS.extraBold,
+    textAlign: 'center',
+  },
+  exitSubtitle: {
+    fontSize: sp(14),
+    fontFamily: FONTS.regular,
+    textAlign: 'center',
+    opacity: 0.9,
+    marginBottom: hp(8),
+  },
+  exitButtonsRow: {
+    flexDirection: 'row',
+    gap: wp(12),
+    width: '100%',
+  },
+  exitStayButton: {
+    flex: 1,
+    paddingVertical: hp(12),
+    backgroundColor: COLORS.light_purple_bckd,
+  },
+  exitExitButton: {
+    flex: 1,
+    paddingVertical: hp(12),
+    backgroundColor: COLORS.wrong_answer,
+  },
+  exitButtonText: {
     fontSize: sp(15),
     fontFamily: FONTS.semiBold,
   },

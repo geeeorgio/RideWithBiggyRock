@@ -25,7 +25,10 @@ const ResultsScreen = () => {
     <CustomScreenWrapper extraStyle={styles.container}>
       <CustomHeader />
 
-      <CustomContainer variant="onboarding" extraStyle={styles.headerContainer}>
+      <CustomContainer
+        variant="lightPurple"
+        extraStyle={styles.headerContainer}
+      >
         <CustomText extraStyle={styles.headerTitle}>My results</CustomText>
         <CustomText extraStyle={styles.headerDescription}>
           Track your progress on the road.{'\n'}
@@ -54,7 +57,7 @@ const ResultsScreen = () => {
               <Image
                 source={SHOP_IMAGES.side_car_main}
                 style={styles.carIcon}
-                resizeMode="contain"
+                resizeMode="cover"
               />
             </View>
             <View style={styles.statsValueCell}>
@@ -71,7 +74,7 @@ const ResultsScreen = () => {
               <Image
                 source={ITEMS.two_fishes}
                 style={styles.fishIcon}
-                resizeMode="contain"
+                resizeMode="cover"
               />
             </View>
             <View style={styles.statsValueCell}>
@@ -88,7 +91,7 @@ const ResultsScreen = () => {
           <Image
             source={ICONS.stars}
             style={styles.starsIcon}
-            resizeMode="contain"
+            resizeMode="cover"
           />
         </View>
 

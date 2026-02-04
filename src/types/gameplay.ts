@@ -47,6 +47,7 @@ export type GamePhase = 'rules' | 'playing' | 'results';
 export type SpawnedItem = {
   id: string;
   type: 'biggy' | 'fish';
+  fishVariant: 'blue' | 'violet' | undefined;
   x: number;
   y: number;
   opacity: Animated.Value;

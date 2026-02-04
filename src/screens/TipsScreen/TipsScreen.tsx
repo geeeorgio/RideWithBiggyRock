@@ -17,14 +17,17 @@ const TipsScreen = () => {
   const { contextTips, unlockContextTip, contextResults } = useGameContext();
 
   const handleUnlockTip = (id: string) => {
-    unlockContextTip(id);
+    if (contextResults.totalScore >= 1) {
+      unlockContextTip(id);
+    }
   };
 
   const renderTipCard = ({ item }: { item: Tip }) => {
     const isLocked = item.locked;
+    const canUnlock = contextResults.totalScore >= 1;
 
     return (
-      <CustomContainer variant="onboarding" extraStyle={styles.tipCard}>
+      <View style={styles.tipCard}>
         {isLocked ? (
           <View style={styles.lockedContent}>
             <Image
@@ -34,8 +37,11 @@ const TipsScreen = () => {
             />
             <CustomButton
               onPress={() => handleUnlockTip(item.id)}
-              disabled={contextResults.totalScore < 1}
-              extraStyle={styles.unlockButton}
+              disabled={!canUnlock}
+              extraStyle={[
+                styles.unlockButton,
+                !canUnlock && styles.unlockButtonDisabled,
+              ]}
             >
               <CustomText extraStyle={styles.unlockText}>
                 Unlocked for 1 points
@@ -49,25 +55,21 @@ const TipsScreen = () => {
               style={styles.smileIcon}
               resizeMode="contain"
             />
+
             <CustomText extraStyle={styles.tipText}>{item.text}</CustomText>
           </View>
         )}
-      </CustomContainer>
+      </View>
     );
   };
 
   return (
     <CustomScreenWrapper extraStyle={styles.container}>
       <View style={styles.headerRow}>
-        <CustomHeader />
-        <View style={styles.balanceBadge}>
-          <CustomText extraStyle={styles.balanceText}>
-            {contextResults.totalScore}
-          </CustomText>
-        </View>
+        <CustomHeader title={`${contextResults.totalScore}`} />
       </View>
 
-      <CustomContainer variant="onboarding" extraStyle={styles.titleContainer}>
+      <CustomContainer variant="lightPurple" extraStyle={styles.titleContainer}>
         <CustomText extraStyle={styles.title}>
           Travel Tips by Biggy Rock
         </CustomText>
