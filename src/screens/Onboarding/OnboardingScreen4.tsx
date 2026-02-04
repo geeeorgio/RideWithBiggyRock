@@ -27,7 +27,11 @@ const OnboardingScreen4 = () => {
           Play games, complete quizzes, earn points, and unlock new rides and
           travel tips as you go.
         </CustomText>
-        <CustomButton onPress={handleNext} extraStyle={styles.button}>
+        <CustomButton
+          variant="onboarding"
+          onPress={handleNext}
+          extraStyle={styles.button}
+        >
           <CustomText extraStyle={styles.buttonText}>Almost There</CustomText>
         </CustomButton>
       </CustomContainer>

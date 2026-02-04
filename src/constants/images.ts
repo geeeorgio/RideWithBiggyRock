@@ -37,8 +37,8 @@ export const QUIZ_IMAGES = {
 };
 
 export const SHOP_IMAGES = {
-  classic_sports_ride: require('../assets/images/shop/ classic_sports_ride.png'),
-  worn_out_sedan: require('../assets/images/shop/ worn_out_sedan.png'),
+  classic_sports_ride: require('../assets/images/shop/classic_sports_ride.png'),
+  worn_out_sedan: require('../assets/images/shop/worn_out_sedan.png'),
   dream_ride: require('../assets/images/shop/dream_ride.png'),
   main_car: require('../assets/images/shop/main_car.png'),
   old_scooter: require('../assets/images/shop/old_scooter.png'),

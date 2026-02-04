@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
 import type { Insets, StyleProp, ViewStyle } from 'react-native';
-import { Pressable, View } from 'react-native';
+import { Pressable } from 'react-native';
 
 import { styles } from './styles';
 
 interface CustomButtonProps {
   children: ReactNode;
-  variant?: 'default' | 'red' | 'black';
+  variant?: 'default' | 'red' | 'onboarding';
   onPress: () => void;
   extraStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
@@ -33,7 +33,6 @@ const CustomButton = ({
       onPress={disabled ? undefined : onPress}
       hitSlop={distance}
     >
-      <View style={styles.overlay} />
       {children}
     </Pressable>
   );

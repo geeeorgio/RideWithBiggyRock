@@ -28,7 +28,11 @@ const OnboardingScreen3 = () => {
         <CustomText extraStyle={styles.description}>
           {`The blue fish is a trap. \n Tap it — lose a point.`}
         </CustomText>
-        <CustomButton onPress={handleNext} extraStyle={styles.button}>
+        <CustomButton
+          variant="onboarding"
+          onPress={handleNext}
+          extraStyle={styles.button}
+        >
           <CustomText extraStyle={styles.buttonText}>Stay Focused</CustomText>
         </CustomButton>
       </CustomContainer>

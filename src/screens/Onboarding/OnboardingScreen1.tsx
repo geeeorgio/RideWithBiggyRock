@@ -26,7 +26,11 @@ const OnboardingScreen1 = () => {
         <CustomText extraStyle={styles.description}>
           {`Always on the road. \n Fast, bold, and a little reckless.`}
         </CustomText>
-        <CustomButton onPress={handleNext} extraStyle={styles.button}>
+        <CustomButton
+          variant="onboarding"
+          onPress={handleNext}
+          extraStyle={styles.button}
+        >
           <CustomText extraStyle={styles.buttonText}>Next</CustomText>
         </CustomButton>
       </CustomContainer>

@@ -10,23 +10,15 @@ export const styles = StyleSheet.create({
     padding: wp(10),
     borderRadius: wp(16),
     overflow: 'hidden',
+    backgroundColor: COLORS.purple_container,
+    borderWidth: wp(1),
+    borderColor: COLORS.purple_border,
   },
   red: {
     backgroundColor: COLORS.wrong_answer,
   },
-  black: {
+  onboarding: {
     backgroundColor: COLORS.light_purple_bckd,
-    borderWidth: wp(1),
-    borderColor: COLORS.purple_border,
-  },
-  overlay: {
-    position: 'absolute',
-    top: wp(4),
-    left: wp(4),
-    right: wp(4),
-    bottom: wp(4),
-    backgroundColor: COLORS.light_purple_bckd,
-    borderRadius: wp(16),
     borderWidth: wp(1),
     borderColor: COLORS.purple_border,
   },

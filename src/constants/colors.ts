@@ -16,4 +16,6 @@ export const COLORS = {
 
   purple_overlay_medium: 'rgba(169, 66, 172, 0.65)',
   white_overlay_light: 'rgba(255, 246, 246, 0.25)',
+
+  black_overlay: 'rgba(0, 0, 0, 0.1)',
 };
