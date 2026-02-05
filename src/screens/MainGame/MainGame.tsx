@@ -6,6 +6,7 @@ import {
 } from './components';
 
 import { CustomHeader, CustomScreenWrapper } from 'src/components';
+import { ICONS } from 'src/constants';
 import { useMainGameLogic } from 'src/hooks';
 
 const MainGame = () => {
@@ -32,6 +33,7 @@ const MainGame = () => {
       <CustomHeader
         title={gamePhase === 'playing' ? 'Catch it!' : 'Rules'}
         onBackPress={handleBackPress}
+        iconSource={gamePhase !== 'playing' ? ICONS.rules : undefined}
       />
 
       {gamePhase === 'playing' && (

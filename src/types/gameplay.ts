@@ -62,6 +62,8 @@ export type FloatingScore = {
   translateY: Animated.Value;
 };
 
+export type QuizState = 'intro' | 'question' | 'complete';
+
 export type GameContextType = {
   contextBackground: ImageSourcePropType;
   setContextBackground: (background: ImageSourcePropType) => void;

@@ -79,13 +79,16 @@ const TipsScreen = () => {
         </CustomText>
       </CustomContainer>
 
-      <FlatList
-        data={contextTips}
-        renderItem={renderTipCard}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.listContent}
-        showsVerticalScrollIndicator={false}
-      />
+      <View style={styles.listContainer}>
+        <FlatList
+          data={contextTips}
+          renderItem={renderTipCard}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.listContent}
+          showsVerticalScrollIndicator={false}
+          ListFooterComponent={() => <View style={styles.listFooter} />}
+        />
+      </View>
     </CustomScreenWrapper>
   );
 };

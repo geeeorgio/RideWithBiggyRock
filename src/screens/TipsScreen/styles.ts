@@ -37,15 +37,26 @@ export const styles = StyleSheet.create({
     fontSize: sp(12),
     textAlign: 'center',
   },
+  listContainer: {
+    flex: 1,
+    width: '100%',
+  },
   listContent: {
+    paddingHorizontal: wp(20),
     paddingBottom: hp(20),
-    gap: hp(10),
+    gap: hp(12),
+  },
+  listFooter: {
+    height: hp(40),
   },
   tipCard: {
+    width: '100%',
     backgroundColor: COLORS.purple,
     borderRadius: wp(16),
-    paddingVertical: hp(16),
+    paddingVertical: hp(8),
     paddingHorizontal: wp(16),
+    borderWidth: 1,
+    borderColor: COLORS.white_overlay_light,
   },
   lockedContent: {
     alignItems: 'center',
@@ -56,7 +67,7 @@ export const styles = StyleSheet.create({
     height: wp(24),
   },
   unlockButton: {
-    paddingVertical: hp(10),
+    paddingVertical: hp(8),
     paddingHorizontal: wp(24),
     backgroundColor: COLORS.purple_overlay_medium,
     borderRadius: wp(20),
@@ -65,7 +76,8 @@ export const styles = StyleSheet.create({
     opacity: 0.6,
   },
   unlockText: {
-    fontSize: sp(13),
+    fontSize: sp(12),
+    fontFamily: FONTS.extraLight,
   },
   unlockedContent: {
     alignItems: 'center',
@@ -76,7 +88,7 @@ export const styles = StyleSheet.create({
     height: wp(24),
   },
   tipText: {
-    fontSize: sp(14),
+    fontSize: sp(12),
     textAlign: 'center',
   },
 });

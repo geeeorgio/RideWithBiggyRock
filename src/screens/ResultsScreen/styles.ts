@@ -10,14 +10,16 @@ export const styles = StyleSheet.create({
   headerContainer: {
     alignSelf: 'center',
     width: '80%',
-    padding: wp(16),
+    padding: wp(12),
     alignItems: 'center',
-    marginTop: hp(10),
     borderWidth: 1,
     borderColor: COLORS.white_overlay_light,
   },
   headerTitle: {
     fontSize: sp(16),
+    textShadowColor: COLORS.wrong_answer,
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
     fontFamily: FONTS.extraBold,
     marginBottom: hp(10),
   },
@@ -31,7 +33,7 @@ export const styles = StyleSheet.create({
     gap: hp(10),
   },
   statsTable: {
-    borderRadius: wp(14),
+    borderRadius: wp(16),
     borderWidth: 1,
     borderColor: COLORS.white,
     overflow: 'hidden',
@@ -78,7 +80,7 @@ export const styles = StyleSheet.create({
   },
   valueBadge: {
     backgroundColor: COLORS.white_overlay_light,
-    borderRadius: wp(10),
+    borderRadius: wp(16),
     paddingVertical: hp(8),
     paddingHorizontal: wp(20),
     minWidth: wp(70),
@@ -98,7 +100,7 @@ export const styles = StyleSheet.create({
     height: hp(44),
   },
   topScoresTable: {
-    borderRadius: wp(14),
+    borderRadius: wp(16),
     borderWidth: 1,
     borderColor: COLORS.white,
     overflow: 'hidden',

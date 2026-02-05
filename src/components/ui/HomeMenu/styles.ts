@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     marginTop: hp(20),
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.dark_purple,
     borderRadius: wp(16),
     borderWidth: wp(1),
     borderColor: COLORS.white,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     left: wp(6),
     right: wp(6),
     bottom: wp(6),
-    backgroundColor: COLORS.purple_overlay_dark,
+    backgroundColor: COLORS.purple_overlay_light,
     borderRadius: wp(12),
   },
   storyBtnOverlay: {

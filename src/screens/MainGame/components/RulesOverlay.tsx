@@ -31,28 +31,18 @@ const RulesOverlay = ({ onStart }: RulesOverlayProps) => {
         </View>
       </View>
 
-      <CustomContainer
-        variant="onboarding"
-        extraStyle={styles.rulesTextContainer}
-      >
-        <CustomText extraStyle={styles.rulesTitle}>
-          Catch Biggy Rock — tap him as soon as he appears.
-        </CustomText>
+      <CustomContainer extraStyle={styles.rulesTextContainer}>
         <CustomText extraStyle={styles.rulesDescription}>
-          Be fast — he stays on screen for a short time.
-        </CustomText>
-        <CustomText extraStyle={styles.rulesDescription}>
-          Don't tap the fish — it gives −1 point.
-        </CustomText>
-        <CustomText extraStyle={styles.rulesDescription}>
-          The faster you react, the more points you earn.
-        </CustomText>
-        <CustomText extraStyle={styles.rulesHighlight}>
-          You have 1 minute
+          Catch Biggy Rock — tap him as soon as he appears. {'\n'} Be fast — he
+          stays on screen for a short time. {'\n'} Don't tap the fish — it gives
+          −1 point. {'\n'}
+          The faster you react, the more points you earn. {'\n'} You have 1
+          minute
         </CustomText>
       </CustomContainer>
 
       <CustomButton onPress={onStart} extraStyle={styles.playButton}>
+        <View style={styles.playButtonOverlay} />
         <CustomText extraStyle={styles.playButtonText}>Play</CustomText>
         <Image
           source={ICONS.play}

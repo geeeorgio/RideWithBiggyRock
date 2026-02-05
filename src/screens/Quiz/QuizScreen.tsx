@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { Image, Pressable, ScrollView, View } from 'react-native';
 
@@ -12,11 +13,14 @@ import {
 } from 'src/components';
 import { ICONS, QUIZ_IMAGES } from 'src/constants';
 import { useGameContext } from 'src/hooks/useGameContext';
-import type { QuizQuestion } from 'src/types';
-
-type QuizState = 'intro' | 'question' | 'complete';
+import type {
+  MainStackNavigationProp,
+  QuizQuestion,
+  QuizState,
+} from 'src/types';
 
 const QuizScreen = () => {
+  const navigation = useNavigation<MainStackNavigationProp>();
   const { contextQuiz, addToTotalScore } = useGameContext();
 
   const [quizState, setQuizState] = useState<QuizState>('intro');
@@ -85,10 +89,10 @@ const QuizScreen = () => {
       <Image
         source={QUIZ_IMAGES.quiz_1}
         style={styles.introImage}
-        resizeMode="contain"
+        resizeMode="cover"
       />
 
-      <CustomContainer variant="onboarding" extraStyle={styles.introContent}>
+      <CustomContainer extraStyle={styles.introContent}>
         <CustomText extraStyle={styles.introDescription}>
           Test your knowledge about Biggy Rock and his journey. {'\n'} Points
           you earn in the quiz are added to your total score and can be used to
@@ -97,7 +101,8 @@ const QuizScreen = () => {
       </CustomContainer>
 
       <CustomButton onPress={handleStartQuiz} extraStyle={styles.startButton}>
-        <CustomText extraStyle={styles.startButtonText}>Start Quiz</CustomText>
+        <View style={styles.startBtnOverlay} />
+        <CustomText extraStyle={styles.startButtonText}>Start quiz</CustomText>
       </CustomButton>
     </View>
   );
@@ -111,156 +116,164 @@ const QuizScreen = () => {
         currentQuestion.correctAnswer.trim().toLowerCase();
 
     return (
-      <ScrollView
-        style={styles.questionScrollView}
-        contentContainerStyle={styles.questionContainer}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={styles.progressContainer}>
-          <CustomText extraStyle={styles.progressText}>
-            Question {currentQuestionIndex + 1} of {contextQuiz.length}
-          </CustomText>
-
-          <View style={styles.pointsBadge}>
-            <CustomText extraStyle={styles.pointsText}>
-              +{earnedPoints}
-            </CustomText>
-          </View>
-        </View>
-
-        <CustomContainer
-          variant="onboarding"
-          extraStyle={styles.questionContent}
+      <>
+        <ScrollView
+          style={styles.questionScrollView}
+          contentContainerStyle={styles.questionContainer}
+          showsVerticalScrollIndicator={false}
         >
-          <CustomText extraStyle={styles.questionText}>
-            {currentQuestion.question}
-          </CustomText>
-        </CustomContainer>
+          <CustomContainer
+            variant="onboarding"
+            extraStyle={styles.questionContent}
+          >
+            <Image
+              source={ICONS.question}
+              style={styles.questionIcon}
+              resizeMode="contain"
+            />
+            <CustomText extraStyle={styles.questionText}>
+              {currentQuestion.question}
+            </CustomText>
+          </CustomContainer>
 
-        <View style={styles.optionsContainer}>
-          {currentQuestion.options.map((option, index) => {
-            const isSelected = selectedAnswer === option;
+          <View style={styles.optionsContainer}>
+            {currentQuestion.options.map((option, index) => {
+              const isSelected = selectedAnswer === option;
 
-            const isCorrect =
-              option.trim().toLowerCase() ===
-              currentQuestion.correctAnswer.trim().toLowerCase();
+              const isCorrect =
+                option.trim().toLowerCase() ===
+                currentQuestion.correctAnswer.trim().toLowerCase();
 
-            const showAsCorrect = isSelected && isCorrect;
+              const showAsCorrect = isSelected && isCorrect;
 
-            const showAsWrong = isSelected && !isCorrect;
+              const showAsWrong = isSelected && !isCorrect;
 
-            return (
-              <Pressable
-                key={`${currentQuestion.id}_option_${index}`}
-                onPress={() => handleSelectAnswer(option)}
-                disabled={selectedAnswer !== null}
-                style={[
-                  styles.optionButton,
+              return (
+                <Pressable
+                  key={`${currentQuestion.id}_option_${index}`}
+                  onPress={() => handleSelectAnswer(option)}
+                  disabled={selectedAnswer !== null}
+                  style={[
+                    styles.optionButton,
 
-                  showAsCorrect && styles.optionCorrect,
+                    showAsCorrect && styles.optionCorrect,
 
-                  showAsWrong && styles.optionWrong,
-                ]}
-              >
-                <CustomText
-                  extraStyle={[
-                    styles.optionText,
-
-                    showAsCorrect && styles.optionTextCorrect,
-
-                    showAsWrong && styles.optionTextWrong,
+                    showAsWrong && styles.optionWrong,
                   ]}
                 >
-                  {option}
-                </CustomText>
-              </Pressable>
-            );
-          })}
-        </View>
-
-        {showHint && !isCorrectAnswer && (
-          <CustomContainer variant="red" extraStyle={styles.hintContainer}>
-            <View style={styles.hintHeader}>
-              <Image
-                source={ICONS.answer}
-                style={styles.hintIcon}
-                resizeMode="contain"
-              />
-
-              <CustomText extraStyle={styles.hintTitle}>Hint</CustomText>
-            </View>
-
-            <CustomText extraStyle={styles.hintText}>
-              {currentQuestion.hint}
-            </CustomText>
-
-            <CustomButton
-              onPress={handleTryAgain}
-              extraStyle={styles.tryAgainButton}
-            >
-              <CustomText extraStyle={styles.tryAgainText}>
-                Try Again
-              </CustomText>
-            </CustomButton>
-          </CustomContainer>
-        )}
-
-        {isCorrectAnswer && (
-          <View style={styles.correctFeedback}>
-            <CustomText extraStyle={styles.correctText}>Correct! +1</CustomText>
+                  <CustomText extraStyle={[styles.optionText]}>
+                    {option}
+                  </CustomText>
+                </Pressable>
+              );
+            })}
           </View>
-        )}
-      </ScrollView>
+
+          {showHint && !isCorrectAnswer && (
+            <>
+              <CustomContainer extraStyle={styles.hintContainer}>
+                <View style={styles.hintHeader}>
+                  <Image
+                    source={ICONS.answer}
+                    style={styles.hintIcon}
+                    resizeMode="contain"
+                  />
+                  <CustomText extraStyle={styles.hintText}>
+                    {currentQuestion.hint}
+                  </CustomText>
+                </View>
+              </CustomContainer>
+              <CustomButton
+                onPress={handleTryAgain}
+                extraStyle={styles.tryAgainButton}
+              >
+                <CustomText extraStyle={styles.tryAgainText}>
+                  Try Again
+                </CustomText>
+              </CustomButton>
+            </>
+          )}
+
+          {isCorrectAnswer && (
+            <View style={styles.correctFeedback}>
+              <CustomText extraStyle={styles.correctText}>
+                Correct! +1
+              </CustomText>
+            </View>
+          )}
+        </ScrollView>
+        <View style={styles.progressContainer}>
+          <CustomText extraStyle={styles.progressText}>
+            {currentQuestionIndex + 1} / {contextQuiz.length}
+          </CustomText>
+        </View>
+      </>
     );
   };
 
   const renderComplete = () => (
-    <View style={styles.completeContainer}>
-      <Image
-        source={QUIZ_IMAGES.quiz_2}
-        style={styles.completeImage}
-        resizeMode="contain"
-      />
-
-      <CustomContainer variant="onboarding" extraStyle={styles.completeContent}>
-        <CustomText extraStyle={styles.completeTitle}>
-          Quiz Complete!
-        </CustomText>
-
-        <CustomText extraStyle={styles.completeDescription}>
-          You’ve successfully completed the quiz. Your earned points have been
-          added — use them to unlock vehicles and travel tips and keep moving
-          forward.
-        </CustomText>
-
-        <View style={styles.completeBadge}>
-          <CustomText extraStyle={styles.completeBadgeText}>
-            +{earnedPoints} Points
-          </CustomText>
-        </View>
-      </CustomContainer>
-
-      <CustomButton onPress={handleStartQuiz} extraStyle={styles.restartButton}>
-        <CustomText extraStyle={styles.restartButtonText}>
-          Start again
-        </CustomText>
-      </CustomButton>
-      <CustomButton onPress={handleStartQuiz} extraStyle={styles.restartButton}>
-        <CustomText extraStyle={styles.restartButtonText}>
-          Tap to play
-        </CustomText>
+    <>
+      <View style={styles.completeContainer}>
         <Image
-          source={ICONS.play}
-          style={styles.playIcon}
-          resizeMode="contain"
+          source={QUIZ_IMAGES.quiz_2}
+          style={styles.completeImage}
+          resizeMode="cover"
         />
-      </CustomButton>
-    </View>
+
+        <CustomContainer
+          variant="onboarding"
+          extraStyle={styles.completeContent}
+        >
+          <CustomText extraStyle={styles.completeDescription}>
+            You’ve successfully completed the quiz. Your earned points have been
+            added — use them to unlock vehicles and travel tips and keep moving
+            forward.
+          </CustomText>
+
+          <Image
+            source={ICONS.question}
+            style={styles.completeBadgeIcon}
+            resizeMode="contain"
+          />
+        </CustomContainer>
+
+        <View style={styles.restartButtonsContainer}>
+          <CustomButton
+            onPress={handleStartQuiz}
+            extraStyle={styles.restartButton}
+          >
+            <View style={styles.restartBtnOverlay} />
+            <CustomText extraStyle={styles.restartButtonText}>
+              Start again
+            </CustomText>
+          </CustomButton>
+          <CustomButton
+            onPress={() => navigation.navigate('MainGameScreen')}
+            extraStyle={styles.restartButton}
+          >
+            <View style={styles.restartBtnOverlay} />
+            <CustomText extraStyle={styles.restartButtonText}>
+              Tap to play
+            </CustomText>
+            <Image
+              source={ICONS.play}
+              style={styles.playIcon}
+              resizeMode="contain"
+            />
+          </CustomButton>
+        </View>
+      </View>
+      <View style={styles.progressContainer}>
+        <CustomText extraStyle={styles.progressText}>Quiz is over</CustomText>
+      </View>
+    </>
   );
 
   return (
     <CustomScreenWrapper extraStyle={styles.container}>
-      <CustomHeader title="Quiz" iconSource={ICONS.question} />
+      <CustomHeader
+        title={quizState === 'intro' ? 'Quiz' : earnedPoints.toString()}
+      />
 
       {quizState === 'intro' && renderIntro()}
 

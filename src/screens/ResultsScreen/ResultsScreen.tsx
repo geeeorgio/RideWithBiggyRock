@@ -91,7 +91,7 @@ const ResultsScreen = () => {
           <Image
             source={ICONS.stars}
             style={styles.starsIcon}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </View>
 

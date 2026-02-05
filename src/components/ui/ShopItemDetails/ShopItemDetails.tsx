@@ -39,6 +39,7 @@ const ShopItemDetails = ({
         </View>
 
         <CustomButton onPress={onBack} extraStyle={styles.playButton}>
+          <View style={styles.playButtonOverlay} />
           <CustomText extraStyle={styles.playButtonText}>
             Play to improve
           </CustomText>
