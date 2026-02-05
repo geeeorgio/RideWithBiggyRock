@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     left: wp(3),
     right: wp(3),
     bottom: wp(3),
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.white_overlay_light,
     borderRadius: wp(12),
   },
 
@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   storyButton: {
-    backgroundColor: COLORS.light_purple_bckd,
+    backgroundColor: COLORS.purple_overlay_medium,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

@@ -31,9 +31,9 @@ const MainGame = () => {
   return (
     <CustomScreenWrapper>
       <CustomHeader
-        title={gamePhase === 'playing' ? 'Catch it!' : 'Rules'}
+        title={gamePhase === 'playing' ? '' : 'Rules'}
         onBackPress={handleBackPress}
-        iconSource={gamePhase !== 'playing' ? ICONS.rules : undefined}
+        iconSource={gamePhase === 'playing' ? undefined : ICONS.rules}
       />
 
       {gamePhase === 'playing' && (

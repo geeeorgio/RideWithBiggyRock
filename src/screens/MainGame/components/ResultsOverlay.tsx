@@ -37,7 +37,7 @@ const ResultsOverlay = ({
             </CustomText>
           </View>
           <Image
-            source={SHOP_IMAGES.side_car_main}
+            source={SHOP_IMAGES.main_car}
             style={styles.resultsCarIcon}
             resizeMode="contain"
           />

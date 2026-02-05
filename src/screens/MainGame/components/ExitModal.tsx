@@ -12,10 +12,7 @@ interface ExitModalProps {
 const ExitModal = ({ onStay, onExit }: ExitModalProps) => {
   return (
     <View style={styles.exitOverlay}>
-      <CustomContainer
-        variant="lightPurple"
-        extraStyle={styles.exitModalContainer}
-      >
+      <CustomContainer extraStyle={styles.exitModalContainer}>
         <CustomText extraStyle={styles.exitTitle}>Stop the game?</CustomText>
         <CustomText extraStyle={styles.exitSubtitle}>
           Progress will not be saved!

@@ -28,6 +28,8 @@ export const useMainGameLogic = () => {
 
   const [gamePhase, setGamePhase] = useState<GamePhase>('rules');
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION);
+  const [isPaused, setIsPaused] = useState(false);
+
   const [sessionScore, setSessionScore] = useState(0);
   const [sessionBiggy, setSessionBiggy] = useState(0);
   const [sessionFish, setSessionFish] = useState(0);
@@ -45,7 +47,6 @@ export const useMainGameLogic = () => {
     } else {
       setContextBackground(MAIN_BG_IMAGE);
     }
-
     return () => {
       setContextBackground(MAIN_BG_IMAGE);
     };
@@ -63,10 +64,10 @@ export const useMainGameLogic = () => {
   }, []);
 
   const getRandomPosition = useCallback(() => {
-    const itemSize = wp(80);
+    const itemSize = wp(120);
     const padding = wp(20);
-    const topOffset = hp(120);
-    const bottomOffset = hp(350);
+    const topOffset = hp(140);
+    const bottomOffset = hp(100);
 
     const x = padding + Math.random() * (SCREEN_WIDTH - itemSize - padding * 2);
     const y =
@@ -78,6 +79,11 @@ export const useMainGameLogic = () => {
 
   const spawnItem = useCallback(() => {
     if (gamePhase !== 'playing') return;
+
+    if (isPaused) {
+      spawnRef.current = setTimeout(spawnItem, 500);
+      return;
+    }
 
     const isBiggy = Math.random() > 0.35;
     const fishType = Math.random() > 0.5 ? 'blue' : 'violet';
@@ -117,13 +123,12 @@ export const useMainGameLogic = () => {
       SPAWN_INTERVAL_MIN +
       Math.random() * (SPAWN_INTERVAL_MAX - SPAWN_INTERVAL_MIN);
     spawnRef.current = setTimeout(spawnItem, nextSpawn);
-  }, [gamePhase, getRandomPosition]);
+  }, [gamePhase, isPaused, getRandomPosition]);
 
   const showFloatingScore = useCallback(
     (value: number, x: number, y: number) => {
       const opacity = new Animated.Value(1);
       const translateY = new Animated.Value(0);
-
       const floatingId = `float_${Date.now()}`;
 
       const newFloating: FloatingScore = {
@@ -157,10 +162,11 @@ export const useMainGameLogic = () => {
 
   const handleItemTap = useCallback(
     (item: SpawnedItem) => {
+      if (isPaused) return;
+
       const scoreChange = item.type === 'biggy' ? 1 : -1;
 
       setSessionScore((prev) => prev + scoreChange);
-
       if (item.type === 'biggy') {
         setSessionBiggy((prev) => prev + 1);
       } else {
@@ -168,27 +174,38 @@ export const useMainGameLogic = () => {
       }
 
       showFloatingScore(scoreChange, item.x + wp(40), item.y);
-
       setSpawnedItems((prev) => prev.filter((i) => i.id !== item.id));
     },
-    [showFloatingScore],
+    [showFloatingScore, isPaused],
   );
 
   const handleBackPress = useCallback(() => {
     if (gamePhase === 'playing') {
+      setIsPaused(true);
       setShowExitModal(true);
     } else {
       navigation.goBack();
     }
   }, [gamePhase, navigation]);
 
-  const goBack = useCallback(() => {
+  const closeExitModal = useCallback(() => {
+    setIsPaused(false);
+    setShowExitModal(false);
+  }, []);
+
+  const confirmExit = useCallback(() => {
+    clearAllTimers();
+    setIsPaused(false);
+    setShowExitModal(false);
+    setGamePhase('rules');
+    setContextBackground(MAIN_BG_IMAGE);
     navigation.goBack();
-  }, [navigation]);
+  }, [clearAllTimers, navigation, setContextBackground]);
 
   const startGame = useCallback(() => {
     setGamePhase('playing');
     setTimeLeft(GAME_DURATION);
+    setIsPaused(false);
     setSessionScore(0);
     setSessionBiggy(0);
     setSessionFish(0);
@@ -203,13 +220,11 @@ export const useMainGameLogic = () => {
     setSpawnedItems([]);
 
     const finalScore = Math.max(0, sessionScore);
-
     const currentTopScores = [
       contextResults.topScore.topScore1,
       contextResults.topScore.topScore2,
       contextResults.topScore.topScore3,
     ];
-
     const newTopScores = [...currentTopScores, finalScore]
       .sort((a, b) => b - a)
       .slice(0, 3);
@@ -235,39 +250,29 @@ export const useMainGameLogic = () => {
     updateContextResults,
   ]);
 
-  const closeExitModal = useCallback(() => {
-    setShowExitModal(false);
-  }, []);
-
-  const confirmExit = useCallback(() => {
-    clearAllTimers();
-    setShowExitModal(false);
-    setGamePhase('rules');
-    setContextBackground(MAIN_BG_IMAGE);
-    navigation.goBack();
-  }, [clearAllTimers, navigation, setContextBackground]);
-
   useEffect(() => {
     if (gamePhase === 'playing') {
       timerRef.current = setInterval(() => {
-        setTimeLeft((prev) => {
-          if (prev <= 1) {
-            return 0;
-          }
-          return prev - 1;
-        });
+        if (!isPaused) {
+          setTimeLeft((prev) => {
+            if (prev <= 1) return 0;
+            return prev - 1;
+          });
+        }
       }, 1000);
 
-      const initialSpawnDelay =
-        SPAWN_INTERVAL_MIN +
-        Math.random() * (SPAWN_INTERVAL_MAX - SPAWN_INTERVAL_MIN);
-      spawnRef.current = setTimeout(spawnItem, initialSpawnDelay);
+      if (!spawnRef.current) {
+        const initialSpawnDelay =
+          SPAWN_INTERVAL_MIN +
+          Math.random() * (SPAWN_INTERVAL_MAX - SPAWN_INTERVAL_MIN);
+        spawnRef.current = setTimeout(spawnItem, initialSpawnDelay);
+      }
     }
 
     return () => {
-      clearAllTimers();
+      if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [gamePhase, spawnItem, clearAllTimers]);
+  }, [gamePhase, isPaused, spawnItem]);
 
   useEffect(() => {
     if (timeLeft === 0 && gamePhase === 'playing') {
@@ -276,10 +281,12 @@ export const useMainGameLogic = () => {
   }, [timeLeft, gamePhase, endGame]);
 
   useEffect(() => {
-    return () => {
-      clearAllTimers();
-    };
+    return () => clearAllTimers();
   }, [clearAllTimers]);
+
+  const goBack = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
 
   const formatTime = useCallback((seconds: number) => {
     const mins = Math.floor(seconds / 60);
