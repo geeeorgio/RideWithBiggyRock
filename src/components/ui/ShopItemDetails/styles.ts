@@ -15,25 +15,25 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(20),
   },
   largeCarImage: {
-    width: wp(320),
-    height: hp(250),
+    width: wp(300),
+    height: hp(230),
     marginBottom: hp(20),
   },
   infoCard: {
     width: '100%',
     backgroundColor: COLORS.purple_overlay_medium,
     borderRadius: wp(20),
-    padding: wp(20),
+    padding: wp(12),
     borderWidth: 1,
     borderColor: COLORS.white_overlay_light,
   },
   infoTitle: {
-    fontSize: sp(20),
+    fontSize: sp(18),
     textAlign: 'center',
-    marginBottom: hp(10),
+    marginBottom: hp(6),
   },
   infoDescription: {
-    fontSize: sp(14),
+    fontSize: sp(12),
     textAlign: 'center',
   },
   playButton: {
@@ -61,11 +61,11 @@ export const styles = StyleSheet.create({
     borderRadius: wp(12),
   },
   playButtonText: {
-    fontSize: sp(18),
+    fontSize: sp(16),
   },
   playButtonIcon: {
-    width: wp(24),
-    height: wp(24),
+    width: wp(20),
+    height: wp(20),
   },
   playButtonIconImage: {
     width: '100%',

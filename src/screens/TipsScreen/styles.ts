@@ -20,21 +20,23 @@ export const styles = StyleSheet.create({
   },
   titleContainer: {
     width: '80%',
-    padding: wp(16),
+    padding: wp(12),
     alignItems: 'center',
-    marginTop: hp(10),
     marginBottom: hp(15),
-    borderWidth: 1,
-    borderColor: COLORS.white,
+    borderWidth: 2,
+    borderColor: COLORS.white_overlay_light,
   },
   title: {
-    fontSize: sp(16),
+    fontSize: sp(14),
     fontFamily: FONTS.extraBold,
+    textShadowColor: COLORS.wrong_answer,
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
     marginBottom: hp(8),
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: sp(12),
+    fontSize: sp(11),
     textAlign: 'center',
   },
   listContainer: {
@@ -63,20 +65,20 @@ export const styles = StyleSheet.create({
     gap: hp(10),
   },
   lockIcon: {
-    width: wp(24),
-    height: wp(24),
+    width: wp(20),
+    height: wp(20),
   },
   unlockButton: {
     paddingVertical: hp(8),
     paddingHorizontal: wp(24),
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.light_purple_bckd,
     borderRadius: wp(20),
   },
   unlockButtonDisabled: {
     opacity: 0.6,
   },
   unlockText: {
-    fontSize: sp(12),
+    fontSize: sp(11),
     fontFamily: FONTS.extraLight,
   },
   unlockedContent: {
@@ -84,11 +86,11 @@ export const styles = StyleSheet.create({
     gap: hp(8),
   },
   smileIcon: {
-    width: wp(24),
-    height: wp(24),
+    width: wp(20),
+    height: wp(20),
   },
   tipText: {
-    fontSize: sp(12),
+    fontSize: sp(10),
     textAlign: 'center',
   },
 });

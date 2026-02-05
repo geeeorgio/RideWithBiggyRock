@@ -12,19 +12,19 @@ export const styles = StyleSheet.create({
   },
   headerTextContainer: {
     width: '80%',
-    padding: wp(12),
+    padding: wp(8),
     backgroundColor: COLORS.purple_overlay_medium,
     gap: hp(8),
-    borderRadius: wp(15),
+    borderRadius: wp(16),
     borderWidth: 1,
     borderColor: COLORS.white_overlay_light,
   },
   headerTitle: {
-    fontSize: sp(16),
+    fontSize: sp(14),
     textAlign: 'center',
   },
   headerDesc: {
-    fontSize: sp(12),
+    fontSize: sp(10),
     textAlign: 'center',
   },
   carsContainer: {

@@ -80,7 +80,7 @@ export const styles = StyleSheet.create({
     width: '88%',
     padding: wp(10),
     alignItems: 'center',
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.purple_overlay_medium,
     borderWidth: 1,
     borderColor: COLORS.white_overlay_light,
     borderRadius: wp(16),
@@ -106,8 +106,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: hp(14),
-    paddingHorizontal: wp(50),
+    paddingVertical: hp(12),
+    paddingHorizontal: wp(40),
     gap: wp(10),
   },
   playButtonOverlay: {
@@ -120,15 +120,15 @@ export const styles = StyleSheet.create({
     borderRadius: wp(12),
   },
   playButtonText: {
-    fontSize: sp(18),
+    fontSize: sp(16),
   },
   playIcon: {
-    width: wp(24),
-    height: wp(24),
+    width: wp(20),
+    height: wp(20),
   },
   timerContainer: {
     position: 'absolute',
-    top: hp(2),
+    top: hp(10),
     right: wp(20),
     alignItems: 'center',
     gap: wp(10),
@@ -139,11 +139,13 @@ export const styles = StyleSheet.create({
     borderRadius: wp(12),
     paddingVertical: hp(6),
     paddingHorizontal: wp(14),
+    width: wp(66),
+    alignItems: 'center',
     borderWidth: 1,
     borderColor: COLORS.purple_border,
   },
   timerText: {
-    fontSize: sp(16),
+    fontSize: sp(14),
   },
   scoreBadge: {
     backgroundColor: COLORS.purple_overlay_medium,
@@ -152,11 +154,11 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(16),
     borderWidth: 1,
     borderColor: COLORS.purple_border,
-    minWidth: wp(60),
+    width: wp(66),
     alignItems: 'center',
   },
   scoreText: {
-    fontSize: sp(18),
+    fontSize: sp(14),
     fontFamily: FONTS.extraBold,
   },
   spawnedItem: {

@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     marginBottom: hp(24),
   },
   introDescription: {
-    fontSize: sp(14),
+    fontSize: sp(12),
     textAlign: 'center',
   },
   startBtnOverlay: {
@@ -77,11 +77,11 @@ export const styles = StyleSheet.create({
     padding: wp(10),
   },
   questionIcon: {
-    width: wp(22),
-    height: hp(22),
+    width: wp(20),
+    height: hp(20),
   },
   questionText: {
-    fontSize: sp(15),
+    fontSize: sp(12),
     textAlign: 'center',
   },
   optionsContainer: {
@@ -109,7 +109,7 @@ export const styles = StyleSheet.create({
     borderColor: COLORS.white_overlay_light,
   },
   optionText: {
-    fontSize: sp(14),
+    fontSize: sp(12),
     fontFamily: FONTS.regular,
   },
   hintContainer: {
@@ -176,13 +176,13 @@ export const styles = StyleSheet.create({
     marginBottom: hp(16),
   },
   completeDescription: {
-    fontSize: sp(14),
+    fontSize: sp(12),
     textAlign: 'center',
     marginBottom: hp(10),
   },
   completeBadgeIcon: {
-    width: wp(22),
-    height: wp(22),
+    width: wp(20),
+    height: wp(20),
   },
   restartButtonsContainer: {
     marginTop: hp(16),

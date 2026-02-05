@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     gap: hp(40),
+    paddingTop: hp(40),
   },
   textContainer: {
     width: '88%',

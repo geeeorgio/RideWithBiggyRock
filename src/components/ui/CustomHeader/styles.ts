@@ -34,10 +34,10 @@ export const styles = StyleSheet.create({
     gap: wp(4),
   },
   title: {
-    fontSize: sp(15),
+    fontSize: sp(12),
   },
   icon: {
-    width: wp(20),
-    height: wp(20),
+    width: wp(18),
+    height: wp(18),
   },
 });

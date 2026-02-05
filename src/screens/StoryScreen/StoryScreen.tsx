@@ -16,10 +16,7 @@ const StoryScreen = () => {
       <CustomHeader title="Story" iconSource={ICONS.story}></CustomHeader>
 
       <View style={styles.content}>
-        <CustomContainer
-          variant="lightPurple"
-          extraStyle={styles.contentContainer}
-        >
+        <CustomContainer extraStyle={styles.contentContainer}>
           <CustomText extraStyle={styles.contentText}>
             {`Biggy Rock is a traveler who never stays still.\nHe’s always on the road, exploring new routes, chasing new horizons, and living for the feeling of the journey itself.\nEvery road is different, and not every ride is perfect.\nTo keep moving forward, Biggy Rock needs a reliable ride that won’t let him down.\nPlay the game, earn points,upgrade vehicles, and help Biggy Rock travel further — wherever the road decides to take him.`}
           </CustomText>

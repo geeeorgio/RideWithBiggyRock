@@ -5,8 +5,8 @@ import { hp, sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
   carWrapper: {
-    width: wp(160),
-    height: hp(120),
+    width: wp(150),
+    height: hp(110),
     justifyContent: 'center',
   },
   carImage: { width: '100%', height: '100%' },
@@ -20,15 +20,14 @@ export const styles = StyleSheet.create({
     paddingTop: hp(10),
   },
   lockIcon: {
-    width: wp(40),
-    height: wp(40),
+    width: wp(30),
+    height: wp(30),
     justifyContent: 'center',
     alignItems: 'center',
   },
   priceText: {
-    color: COLORS.white,
-    fontSize: sp(11),
-    marginTop: hp(12),
+    fontSize: sp(8),
+    marginTop: hp(10),
   },
   unlockButton: {
     backgroundColor: COLORS.orange,

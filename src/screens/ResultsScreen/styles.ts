@@ -75,8 +75,8 @@ export const styles = StyleSheet.create({
     height: hp(45),
   },
   fishIcon: {
-    width: wp(65),
-    height: hp(40),
+    width: wp(55),
+    height: hp(44),
   },
   valueBadge: {
     backgroundColor: COLORS.white_overlay_light,
