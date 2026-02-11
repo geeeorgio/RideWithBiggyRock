@@ -10,16 +10,16 @@ export const styles = StyleSheet.create({
     padding: wp(10),
     borderRadius: wp(16),
     overflow: 'hidden',
-    backgroundColor: COLORS.bruno_container,
+    backgroundColor: COLORS.marcus_container,
     borderWidth: wp(1),
-    borderColor: COLORS.bruno_accent,
+    borderColor: COLORS.marcus_main,
   },
   red: {
     backgroundColor: COLORS.wrong_answer,
   },
   onboarding: {
-    backgroundColor: COLORS.bruno_border,
+    backgroundColor: COLORS.marcus_main,
     borderWidth: wp(1),
-    borderColor: COLORS.bruno_accent,
+    borderColor: COLORS.marcus_accent,
   },
 });

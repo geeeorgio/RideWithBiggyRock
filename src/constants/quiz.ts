@@ -3,7 +3,7 @@ import type { QuizQuestion } from 'src/types';
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     id: 'quiz_1',
-    question: 'Who is Bruno the "Desert Rider"?',
+    question: 'Who is Markus the "Arctic Rider"?',
     options: [
       'A traveler always on the road',
       'A race driver',
@@ -15,7 +15,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 'quiz_2',
-    question: 'What matters most to Bruno when traveling?',
+    question: 'What matters most to Markus when traveling?',
     options: ['The journey itself ', 'The finish line', 'Speed', 'Winning'],
     correctAnswer: 'The journey itself',
     hint: 'Not the destination.',
@@ -50,12 +50,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 'quiz_6',
     question: 'What is the main gameplay mechanic?',
     options: [
-      'Tapping Bruno',
+      'Tapping Markus',
       'Moving the character',
       'Avoiding obstacles',
       'Collecting items',
     ],
-    correctAnswer: 'Tapping Bruno',
+    correctAnswer: 'Tapping Markus',
     hint: 'Tap-based gameplay.',
   },
   {
@@ -110,7 +110,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 'quiz_12',
-    question: 'What is the overall vibe of Ride With Bruno?',
+    question: 'What is the overall vibe of Ride With Markus?',
     options: ['Relaxed and casual', 'Stressful', 'Aggressive', 'Complex'],
     correctAnswer: 'Relaxed and casual',
     hint: 'No pressure.',

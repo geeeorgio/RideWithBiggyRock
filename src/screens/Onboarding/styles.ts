@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     gap: hp(20),
   },
   title: {
-    fontSize: sp(16),
+    fontSize: sp(15),
     fontFamily: FONTS.extraBold,
   },
   description: {

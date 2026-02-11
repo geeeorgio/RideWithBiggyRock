@@ -21,11 +21,11 @@ export const styles = StyleSheet.create({
   },
   infoCard: {
     width: '100%',
-    backgroundColor: COLORS.bruno_overlay_light,
+    backgroundColor: COLORS.marcus_container,
     borderRadius: wp(20),
     padding: wp(12),
     borderWidth: 1,
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.marcus_overlay_light,
   },
   infoTitle: {
     fontSize: sp(18),
@@ -48,8 +48,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(30),
     borderRadius: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.bruno_accent,
-    backgroundColor: COLORS.bruno_main,
+    borderColor: COLORS.marcus_accent,
+    backgroundColor: COLORS.marcus_overlay_light,
   },
   playButtonOverlay: {
     position: 'absolute',
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     left: wp(4),
     right: wp(4),
     bottom: wp(4),
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
     borderRadius: wp(12),
   },
   playButtonText: {

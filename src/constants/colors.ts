@@ -33,4 +33,19 @@ export const COLORS = {
 
   bruno_overlay_light: 'rgba(230, 161, 92, 0.3)',
   bruno_overlay_dark: 'rgba(26, 15, 13, 0.9)',
+
+  marcus_main: '#003D4C',
+  marcus_accent: '#4DEFFF',
+  marcus_accent_light: '#E0FDFF',
+
+  marcus_dark: '#001A21',
+  marcus_bg_dark: '#030708',
+
+  marcus_aurora: '#5A189A',
+
+  marcus_border: '#002D38',
+  marcus_container: 'rgba(0, 23, 31, 0.6)',
+
+  marcus_overlay_light: 'rgba(77, 239, 255, 0.15)',
+  marcus_overlay_dark: 'rgba(2, 5, 6, 0.95)',
 };

@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     padding: wp(12),
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.marcus_overlay_light,
   },
   headerTitle: {
     fontSize: sp(16),
@@ -35,13 +35,13 @@ export const styles = StyleSheet.create({
   statsTable: {
     borderRadius: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.white,
+    borderColor: COLORS.marcus_accent_light,
     overflow: 'hidden',
   },
   statsRow: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.white,
+    borderBottomColor: COLORS.marcus_accent_light,
   },
   lastRow: {
     borderBottomWidth: 0,
@@ -53,8 +53,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRightWidth: 1,
-    borderRightColor: COLORS.white,
-    backgroundColor: COLORS.bruno_main,
+    borderRightColor: COLORS.marcus_accent_light,
+    backgroundColor: COLORS.marcus_main,
   },
   statsValueCell: {
     flex: 1,
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(14),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
   },
   statsLabel: {
     fontSize: sp(14),
@@ -86,7 +86,7 @@ export const styles = StyleSheet.create({
     minWidth: wp(70),
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: COLORS.bruno_accent,
+    borderColor: COLORS.marcus_accent,
   },
   badgeValue: {
     fontSize: sp(16),
@@ -102,13 +102,13 @@ export const styles = StyleSheet.create({
   topScoresTable: {
     borderRadius: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.white,
+    borderColor: COLORS.marcus_accent_light,
     overflow: 'hidden',
   },
   topScoreRow: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.white,
+    borderBottomColor: COLORS.marcus_accent_light,
   },
   topScoreLabelCell: {
     flex: 1,
@@ -117,8 +117,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRightWidth: 1,
-    borderRightColor: COLORS.white,
-    backgroundColor: COLORS.bruno_main,
+    borderRightColor: COLORS.marcus_accent_light,
+    backgroundColor: COLORS.marcus_main,
   },
   topScoreValueCell: {
     flex: 1,
@@ -126,7 +126,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(14),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
   },
   topScoreLabel: {
     fontSize: sp(14),

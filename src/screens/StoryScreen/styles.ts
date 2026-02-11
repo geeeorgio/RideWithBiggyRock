@@ -16,8 +16,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     padding: wp(8),
     borderWidth: wp(1),
-    backgroundColor: COLORS.bruno_overlay_light,
-    borderColor: COLORS.bruno_accent,
+    backgroundColor: COLORS.marcus_container,
+    borderColor: COLORS.marcus_overlay_light,
   },
   contentText: {
     fontSize: sp(12),

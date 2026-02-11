@@ -9,10 +9,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     marginTop: hp(20),
-    backgroundColor: COLORS.bruno_container,
+    backgroundColor: COLORS.marcus_container,
     borderRadius: wp(16),
     borderWidth: wp(2),
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.marcus_main,
   },
   overlay: {
     position: 'absolute',
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     left: wp(6),
     right: wp(6),
     bottom: wp(6),
-    backgroundColor: COLORS.bruno_overlay_light,
+    backgroundColor: COLORS.marcus_overlay_light,
     borderRadius: wp(12),
   },
   storyBtnOverlay: {
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     left: wp(6),
     right: wp(6),
     bottom: wp(6),
-    backgroundColor: COLORS.bruno_overlay_light,
+    backgroundColor: COLORS.marcus_overlay_light,
     borderRadius: wp(12),
   },
 
@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   storyButton: {
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
   },
 
   playButton: {
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -80,6 +80,8 @@ export const styles = StyleSheet.create({
     paddingVertical: hp(12),
     borderRadius: wp(16),
     marginBottom: hp(24),
+    borderWidth: wp(1),
+    borderColor: COLORS.marcus_accent,
   },
   playBtnText: {
     fontSize: sp(18),
@@ -98,7 +100,7 @@ export const styles = StyleSheet.create({
     gap: hp(8),
   },
   secondaryButton: {
-    backgroundColor: COLORS.bruno_main,
+    backgroundColor: COLORS.marcus_main,
     borderRadius: wp(16),
     paddingVertical: hp(8),
   },

@@ -24,7 +24,7 @@ const OnboardingScreen3 = () => {
       <CustomContainer variant="onboarding" extraStyle={styles.textContainer}>
         <CustomText extraStyle={styles.title}>Watch Out Obstacles</CustomText>
         <CustomText extraStyle={styles.description}>
-          {`The cactus and tumbleweed are a trap. \n Tap on them — lose a point.`}
+          {`The icebergs and rocks are a trap. \n Tap on them — lose a point.`}
         </CustomText>
         <CustomButton
           variant="onboarding"

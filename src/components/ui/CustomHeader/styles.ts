@@ -25,12 +25,12 @@ export const styles = StyleSheet.create({
   rightContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: COLORS.bruno_overlay_light,
+    backgroundColor: COLORS.marcus_container,
     paddingVertical: hp(6),
     paddingHorizontal: wp(16),
     borderRadius: wp(16),
     borderWidth: wp(1),
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.marcus_overlay_light,
     gap: wp(4),
   },
   title: {
