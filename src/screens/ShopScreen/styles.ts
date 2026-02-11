@@ -13,11 +13,11 @@ export const styles = StyleSheet.create({
   headerTextContainer: {
     width: '80%',
     padding: wp(8),
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.bruno_overlay_light,
     gap: hp(8),
     borderRadius: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.bruno_accent,
   },
   headerTitle: {
     fontSize: sp(14),

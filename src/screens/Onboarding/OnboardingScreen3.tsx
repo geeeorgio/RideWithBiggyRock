@@ -22,11 +22,9 @@ const OnboardingScreen3 = () => {
   return (
     <CustomScreenWrapper extraStyle={styles.pageWrapper}>
       <CustomContainer variant="onboarding" extraStyle={styles.textContainer}>
-        <CustomText extraStyle={styles.title}>
-          Watch Out for the Fish
-        </CustomText>
+        <CustomText extraStyle={styles.title}>Watch Out Obstacles</CustomText>
         <CustomText extraStyle={styles.description}>
-          {`The blue fish is a trap. \n Tap it — lose a point.`}
+          {`The cactus and tumbleweed are a trap. \n Tap on them — lose a point.`}
         </CustomText>
         <CustomButton
           variant="onboarding"
@@ -51,7 +49,7 @@ const OnboardingScreen3 = () => {
         resizeMode="contain"
       />
       <Image
-        source={ITEMS.blue_fish}
+        source={ITEMS.violet_fish}
         style={styles.absoluteImageRight}
         resizeMode="contain"
       />

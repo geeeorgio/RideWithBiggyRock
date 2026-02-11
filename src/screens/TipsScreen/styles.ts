@@ -53,12 +53,12 @@ export const styles = StyleSheet.create({
   },
   tipCard: {
     width: '100%',
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_border,
     borderRadius: wp(16),
     paddingVertical: hp(8),
     paddingHorizontal: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.white_overlay_light,
+    borderColor: COLORS.bruno_accent,
   },
   lockedContent: {
     alignItems: 'center',
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
   unlockButton: {
     paddingVertical: hp(8),
     paddingHorizontal: wp(24),
-    backgroundColor: COLORS.light_purple_bckd,
+    backgroundColor: COLORS.bruno_overlay_light,
     borderRadius: wp(20),
   },
   unlockButtonDisabled: {

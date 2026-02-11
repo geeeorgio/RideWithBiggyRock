@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     marginTop: hp(20),
-    backgroundColor: COLORS.dark_purple,
+    backgroundColor: COLORS.bruno_container,
     borderRadius: wp(16),
     borderWidth: wp(2),
     borderColor: COLORS.white_overlay_light,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     left: wp(6),
     right: wp(6),
     bottom: wp(6),
-    backgroundColor: COLORS.purple_overlay_light,
+    backgroundColor: COLORS.bruno_overlay_light,
     borderRadius: wp(12),
   },
   storyBtnOverlay: {
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     left: wp(6),
     right: wp(6),
     bottom: wp(6),
-    backgroundColor: COLORS.white_overlay_light,
+    backgroundColor: COLORS.bruno_overlay_light,
     borderRadius: wp(12),
   },
 
@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   storyButton: {
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.bruno_main,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
   },
 
   playButton: {
-    backgroundColor: COLORS.white_overlay_light,
+    backgroundColor: COLORS.bruno_main,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -98,7 +98,7 @@ export const styles = StyleSheet.create({
     gap: hp(8),
   },
   secondaryButton: {
-    backgroundColor: COLORS.purple_overlay_light,
+    backgroundColor: COLORS.bruno_main,
     borderRadius: wp(16),
     paddingVertical: hp(8),
   },

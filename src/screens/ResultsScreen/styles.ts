@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRightWidth: 1,
     borderRightColor: COLORS.white,
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_main,
   },
   statsValueCell: {
     flex: 1,
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(14),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_main,
   },
   statsLabel: {
     fontSize: sp(14),
@@ -86,7 +86,7 @@ export const styles = StyleSheet.create({
     minWidth: wp(70),
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: COLORS.purple_border,
+    borderColor: COLORS.bruno_accent,
   },
   badgeValue: {
     fontSize: sp(16),
@@ -118,7 +118,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRightWidth: 1,
     borderRightColor: COLORS.white,
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_main,
   },
   topScoreValueCell: {
     flex: 1,
@@ -126,7 +126,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(14),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_main,
   },
   topScoreLabel: {
     fontSize: sp(14),

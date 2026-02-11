@@ -55,9 +55,9 @@ const ResultsScreen = () => {
           <View style={styles.statsRow}>
             <View style={styles.statsLabelCell}>
               <Image
-                source={SHOP_IMAGES.side_car_main}
+                source={SHOP_IMAGES.main_car}
                 style={styles.carIcon}
-                resizeMode="cover"
+                resizeMode="contain"
               />
             </View>
             <View style={styles.statsValueCell}>
@@ -74,7 +74,7 @@ const ResultsScreen = () => {
               <Image
                 source={ITEMS.two_fishes}
                 style={styles.fishIcon}
-                resizeMode="cover"
+                resizeMode="contain"
               />
             </View>
             <View style={styles.statsValueCell}>

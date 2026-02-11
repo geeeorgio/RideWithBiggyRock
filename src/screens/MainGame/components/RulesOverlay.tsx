@@ -16,7 +16,7 @@ const RulesOverlay = ({ onStart }: RulesOverlayProps) => {
         <View style={styles.rulesImageContainer}>
           <CustomText extraStyle={styles.plusOneText}>+1</CustomText>
           <Image
-            source={SHOP_IMAGES.side_car_main}
+            source={SHOP_IMAGES.main_car}
             style={styles.rulesCarImage}
             resizeMode="contain"
           />
@@ -33,9 +33,9 @@ const RulesOverlay = ({ onStart }: RulesOverlayProps) => {
 
       <CustomContainer extraStyle={styles.rulesTextContainer}>
         <CustomText extraStyle={styles.rulesDescription}>
-          Catch Biggy Rock — tap him as soon as he appears. {'\n'} Be fast — he
-          stays on screen for a short time. {'\n'} Don't tap the fish — it gives
-          −1 point. {'\n'}
+          Catch Bruno — tap him as soon as he appears. {'\n'} Be fast — he stays
+          on screen for a short time. {'\n'} Don't tap the obstacles: taping
+          cactus or tumbleweed will cost you − 1 point. {'\n'}
           The faster you react, the more points you earn. {'\n'} You have 1
           minute
         </CustomText>

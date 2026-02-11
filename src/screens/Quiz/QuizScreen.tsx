@@ -89,13 +89,13 @@ const QuizScreen = () => {
       <Image
         source={QUIZ_IMAGES.quiz_1}
         style={styles.introImage}
-        resizeMode="cover"
+        resizeMode="contain"
       />
 
       <CustomContainer extraStyle={styles.introContent}>
         <CustomText extraStyle={styles.introDescription}>
-          Test your knowledge about Biggy Rock and his journey. {'\n'} Points
-          you earn in the quiz are added to your total score and can be used to
+          Test your knowledge about Bruno and his journey. {'\n'} Points you
+          earn in the quiz are added to your total score and can be used to
           unlock vehicles and travel tips.
         </CustomText>
       </CustomContainer>
@@ -217,7 +217,7 @@ const QuizScreen = () => {
         <Image
           source={QUIZ_IMAGES.quiz_2}
           style={styles.completeImage}
-          resizeMode="cover"
+          resizeMode="contain"
         />
 
         <CustomContainer

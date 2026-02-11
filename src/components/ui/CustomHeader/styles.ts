@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   rightContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.bruno_overlay_light,
     paddingVertical: hp(6),
     paddingHorizontal: wp(16),
     borderRadius: wp(16),

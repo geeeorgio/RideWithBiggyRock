@@ -3,7 +3,7 @@ import type { QuizQuestion } from 'src/types';
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     id: 'quiz_1',
-    question: 'Who is Biggy Rock?',
+    question: 'Who is Bruno the "Desert Rider"?',
     options: [
       'A traveler always on the road',
       'A race driver',
@@ -15,7 +15,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 'quiz_2',
-    question: 'What matters most to Biggy Rock when traveling?',
+    question: 'What matters most to Bruno when traveling?',
     options: ['The journey itself ', 'The finish line', 'Speed', 'Winning'],
     correctAnswer: 'The journey itself',
     hint: 'Not the destination.',
@@ -50,17 +50,17 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 'quiz_6',
     question: 'What is the main gameplay mechanic?',
     options: [
-      'Tapping Biggy Rock',
+      'Tapping Bruno',
       'Moving the character',
       'Avoiding obstacles',
       'Collecting items',
     ],
-    correctAnswer: 'Tapping Biggy Rock',
+    correctAnswer: 'Tapping Bruno',
     hint: 'Tap-based gameplay.',
   },
   {
     id: 'quiz_7',
-    question: 'What happens if you tap the fish?',
+    question: 'What happens if you tap the obstacle?',
     options: ['-1 point', '+1 point', 'Nothing', 'Game over'],
     correctAnswer: '-1 point',
     hint: 'It’s a mistake.',
@@ -110,7 +110,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 'quiz_12',
-    question: 'What is the overall vibe of Ride With Biggy Rock?',
+    question: 'What is the overall vibe of Ride With Bruno?',
     options: ['Relaxed and casual', 'Stressful', 'Aggressive', 'Complex'],
     correctAnswer: 'Relaxed and casual',
     hint: 'No pressure.',

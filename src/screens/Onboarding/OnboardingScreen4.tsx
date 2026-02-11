@@ -45,7 +45,7 @@ const OnboardingScreen4 = () => {
       </View>
 
       <Image
-        source={SHOP_IMAGES.side_car_onbd}
+        source={SHOP_IMAGES.main_car}
         style={styles.absoluteImage4Right}
         resizeMode="contain"
       />

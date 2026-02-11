@@ -9,12 +9,12 @@ export const styles = StyleSheet.create({
     borderRadius: wp(16),
   },
   onboarding: {
-    backgroundColor: COLORS.purple,
+    backgroundColor: COLORS.bruno_overlay_light,
     borderWidth: wp(1),
-    borderColor: COLORS.purple_border,
+    borderColor: COLORS.bruno_accent,
   },
   lightPurple: {
-    backgroundColor: COLORS.purple_container,
+    backgroundColor: COLORS.bruno_container,
   },
   red: {
     backgroundColor: COLORS.wrong_answer,

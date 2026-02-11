@@ -79,7 +79,7 @@ android {
 
     namespace "com.ridewithbiggyrock"
     defaultConfig {
-        applicationId "com.ridewithbiggyrock"
+        applicationId "com.brunodesertdustride"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

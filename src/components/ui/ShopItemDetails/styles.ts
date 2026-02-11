@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   infoCard: {
     width: '100%',
-    backgroundColor: COLORS.purple_overlay_medium,
+    backgroundColor: COLORS.bruno_overlay_light,
     borderRadius: wp(20),
     padding: wp(12),
     borderWidth: 1,
@@ -48,8 +48,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(30),
     borderRadius: wp(16),
     borderWidth: 1,
-    borderColor: COLORS.white_overlay_light,
-    backgroundColor: COLORS.purple_overlay_medium,
+    borderColor: COLORS.bruno_accent,
+    backgroundColor: COLORS.bruno_main,
   },
   playButtonOverlay: {
     position: 'absolute',
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     left: wp(4),
     right: wp(4),
     bottom: wp(4),
-    backgroundColor: COLORS.purple_overlay_light,
+    backgroundColor: COLORS.bruno_main,
     borderRadius: wp(12),
   },
   playButtonText: {
