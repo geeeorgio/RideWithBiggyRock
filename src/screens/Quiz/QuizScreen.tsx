@@ -94,7 +94,7 @@ const QuizScreen = () => {
 
       <CustomContainer extraStyle={styles.introContent}>
         <CustomText extraStyle={styles.introDescription}>
-          Test your knowledge about Bruno and his journey. {'\n'} Points you
+          Test your knowledge about Marcus and his journey. {'\n'} Points you
           earn in the quiz are added to your total score and can be used to
           unlock vehicles and travel tips.
         </CustomText>

@@ -70,7 +70,7 @@ const TipsScreen = () => {
       </View>
 
       <CustomContainer variant="lightPurple" extraStyle={styles.titleContainer}>
-        <CustomText extraStyle={styles.title}>Travel Tips by Bruno</CustomText>
+        <CustomText extraStyle={styles.title}>Travel Tips by Marcus</CustomText>
         <CustomText extraStyle={styles.subtitle}>
           Short thoughts from the road.{'\n'}
           No rules, no maps — just the travel vibe.

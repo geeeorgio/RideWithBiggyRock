@@ -33,7 +33,7 @@ const RulesOverlay = ({ onStart }: RulesOverlayProps) => {
 
       <CustomContainer extraStyle={styles.rulesTextContainer}>
         <CustomText extraStyle={styles.rulesDescription}>
-          Catch Markus — tap him as soon as he appears. {'\n'} Be fast — he
+          Catch Marcus — tap him as soon as he appears. {'\n'} Be fast — he
           stays on screen for a short time. {'\n'} Don't tap the obstacles:
           taping icebergs or rocks will cost you − 1 point. {'\n'}
           The faster you react, the more points you earn. {'\n'} You have 1

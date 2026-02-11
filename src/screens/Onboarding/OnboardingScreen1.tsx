@@ -23,7 +23,7 @@ const OnboardingScreen1 = () => {
     <CustomScreenWrapper extraStyle={styles.pageWrapper}>
       <CustomContainer variant="onboarding" extraStyle={styles.textContainer}>
         <CustomText extraStyle={styles.title}>
-          Meet Markus Arctic Rider
+          Meet Marcus Arctic Rider
         </CustomText>
         <CustomText extraStyle={styles.description}>
           {`Always on the road. \n Always ready for an adventure.`}
